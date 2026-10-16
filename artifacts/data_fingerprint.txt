@@ -1,0 +1,6 @@
+verification_code: AI-A2-7747
+student: TUYISINGIZE Devotha (25/27747)
+seed: 7747
+csv_file: data/AI_A2_2527747.csv
+rows_in_csv: 282
+sha256: 82120e732b1ac8c8b2acd4d7e70b332ebf2a0e18fe402bcef29a751a94768205

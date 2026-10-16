@@ -1,0 +1,200 @@
+{
+  "verification_code": "AI-A2-7747",
+  "algorithm": "KMeans (n_init=20) on median-imputed, standardised features",
+  "features_used": [
+    "rainfall_mm",
+    "avg_temp_c",
+    "soil_moisture_pct",
+    "fertilizer_kg",
+    "field_size_ha"
+  ],
+  "targets_used_for_fitting": false,
+  "fitted_on": "training split only; test farms assigned with predict()",
+  "k_comparison": {
+    "2": {
+      "silhouette": 0.155999,
+      "inertia": 929.9435,
+      "cluster_sizes": [
+        105,
+        118
+      ]
+    },
+    "3": {
+      "silhouette": 0.157457,
+      "inertia": 804.5586,
+      "cluster_sizes": [
+        68,
+        77,
+        78
+      ]
+    },
+    "4": {
+      "silhouette": 0.164438,
+      "inertia": 714.1719,
+      "cluster_sizes": [
+        48,
+        62,
+        48,
+        65
+      ]
+    },
+    "5": {
+      "silhouette": 0.172274,
+      "inertia": 644.1744,
+      "cluster_sizes": [
+        40,
+        48,
+        52,
+        43,
+        40
+      ]
+    },
+    "6": {
+      "silhouette": 0.185694,
+      "inertia": 576.3913,
+      "cluster_sizes": [
+        34,
+        32,
+        45,
+        42,
+        31,
+        39
+      ]
+    }
+  },
+  "selected_k": 6,
+  "selection_reason": "K=6 has the highest silhouette score among K=2..6 (0.1857).",
+  "interpretation": "The best silhouette (0.186) is modest, which is expected because the synthetic inputs are drawn independently from uniform distributions: farms form a continuum rather than sharply separated groups. The score keeps rising up to the largest K tested, so K is chosen at the edge of the allowed range; the gain per extra cluster is small. The clusters are therefore useful as practical segments for planning field visits, not as natural farm types.",
+  "profiles": [
+    {
+      "cluster": 0,
+      "size_train": 34,
+      "center_original_units": {
+        "rainfall_mm": 941.8185,
+        "avg_temp_c": 16.1721,
+        "soil_moisture_pct": 43.6368,
+        "fertilizer_kg": 67.9285,
+        "field_size_ha": 2.7878
+      },
+      "season_A_share": 0.4706,
+      "cooperative_support_share": 0.5588,
+      "mean_yield_tons_after_the_fact": 11.2596,
+      "high_risk_rate_after_the_fact": 0.9118,
+      "defining_traits": [
+        "low temperature",
+        "low fertilizer use",
+        "high field size"
+      ],
+      "plain_language_profile": "Cluster 0 (34 training farms): low temperature, low fertilizer use, high field size. Average harvest 11.26 t; these farms are high-risk more often than the cooperative average (91% vs 50%)."
+    },
+    {
+      "cluster": 1,
+      "size_train": 32,
+      "center_original_units": {
+        "rainfall_mm": 1214.5656,
+        "avg_temp_c": 16.6865,
+        "soil_moisture_pct": 37.6432,
+        "fertilizer_kg": 173.578,
+        "field_size_ha": 1.3245
+      },
+      "season_A_share": 0.3125,
+      "cooperative_support_share": 0.7188,
+      "mean_yield_tons_after_the_fact": 12.455,
+      "high_risk_rate_after_the_fact": 0.0938,
+      "defining_traits": [
+        "high rainfall",
+        "low temperature",
+        "low soil moisture",
+        "high fertilizer use",
+        "low field size"
+      ],
+      "plain_language_profile": "Cluster 1 (32 training farms): high rainfall, low temperature, low soil moisture, high fertilizer use, low field size. Average harvest 12.45 t; these farms are high-risk less often than the cooperative average (9% vs 50%)."
+    },
+    {
+      "cluster": 2,
+      "size_train": 45,
+      "center_original_units": {
+        "rainfall_mm": 809.4529,
+        "avg_temp_c": 16.0603,
+        "soil_moisture_pct": 62.9076,
+        "fertilizer_kg": 180.8768,
+        "field_size_ha": 1.8433
+      },
+      "season_A_share": 0.5111,
+      "cooperative_support_share": 0.5778,
+      "mean_yield_tons_after_the_fact": 12.7424,
+      "high_risk_rate_after_the_fact": 0.3778,
+      "defining_traits": [
+        "low rainfall",
+        "low temperature",
+        "high soil moisture",
+        "high fertilizer use"
+      ],
+      "plain_language_profile": "Cluster 2 (45 training farms): low rainfall, low temperature, high soil moisture, high fertilizer use. Average harvest 12.74 t; these farms are high-risk less often than the cooperative average (38% vs 50%)."
+    },
+    {
+      "cluster": 3,
+      "size_train": 42,
+      "center_original_units": {
+        "rainfall_mm": 814.338,
+        "avg_temp_c": 21.5033,
+        "soil_moisture_pct": 37.276,
+        "fertilizer_kg": 86.583,
+        "field_size_ha": 1.2467
+      },
+      "season_A_share": 0.5238,
+      "cooperative_support_share": 0.4524,
+      "mean_yield_tons_after_the_fact": 8.1797,
+      "high_risk_rate_after_the_fact": 0.4048,
+      "defining_traits": [
+        "low rainfall",
+        "high temperature",
+        "low soil moisture",
+        "low fertilizer use",
+        "low field size"
+      ],
+      "plain_language_profile": "Cluster 3 (42 training farms): low rainfall, high temperature, low soil moisture, low fertilizer use, low field size. Average harvest 8.18 t; these farms are high-risk less often than the cooperative average (40% vs 50%)."
+    },
+    {
+      "cluster": 4,
+      "size_train": 31,
+      "center_original_units": {
+        "rainfall_mm": 987.5652,
+        "avg_temp_c": 22.6984,
+        "soil_moisture_pct": 52.3579,
+        "fertilizer_kg": 188.46,
+        "field_size_ha": 3.0422
+      },
+      "season_A_share": 0.5484,
+      "cooperative_support_share": 0.3871,
+      "mean_yield_tons_after_the_fact": 14.3075,
+      "high_risk_rate_after_the_fact": 0.8387,
+      "defining_traits": [
+        "high temperature",
+        "high fertilizer use",
+        "high field size"
+      ],
+      "plain_language_profile": "Cluster 4 (31 training farms): high temperature, high fertilizer use, high field size. Average harvest 14.31 t; these farms are high-risk more often than the cooperative average (84% vs 50%)."
+    },
+    {
+      "cluster": 5,
+      "size_train": 39,
+      "center_original_units": {
+        "rainfall_mm": 1259.3588,
+        "avg_temp_c": 20.3364,
+        "soil_moisture_pct": 67.2674,
+        "fertilizer_kg": 94.6269,
+        "field_size_ha": 2.0771
+      },
+      "season_A_share": 0.6154,
+      "cooperative_support_share": 0.5385,
+      "mean_yield_tons_after_the_fact": 13.3979,
+      "high_risk_rate_after_the_fact": 0.4359,
+      "defining_traits": [
+        "high rainfall",
+        "high soil moisture"
+      ],
+      "plain_language_profile": "Cluster 5 (39 training farms): high rainfall, high soil moisture. Average harvest 13.40 t; these farms are high-risk less often than the cooperative average (44% vs 50%)."
+    }
+  ]
+}

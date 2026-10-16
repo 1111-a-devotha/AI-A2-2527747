@@ -1,0 +1,39 @@
+{
+  "verification_code": "AI-A2-7747",
+  "student": "TUYISINGIZE Devotha (25/27747)",
+  "seed": 7747,
+  "base_rows": 279,
+  "rows_in_csv": 282,
+  "rows_after_cleaning": 279,
+  "duplicates_removed": 3,
+  "missing_values": {
+    "soil_moisture_pct": 14,
+    "fertilizer_kg": 14
+  },
+  "train_rows": 223,
+  "test_rows": 56,
+  "sha256": "82120e732b1ac8c8b2acd4d7e70b332ebf2a0e18fe402bcef29a751a94768205",
+  "regression": {
+    "selected": "linear_regression",
+    "mae": 0.725943,
+    "rmse": 0.938223,
+    "r2": 0.864697
+  },
+  "classification": {
+    "selected": "logistic_regression",
+    "precision": 0.961538,
+    "recall": 0.892857,
+    "f1": 0.925926,
+    "roc_auc": 0.994898
+  },
+  "clustering": {
+    "selected_k": 6,
+    "silhouette": 0.185694
+  },
+  "environment": {
+    "python": "3.14.6",
+    "scikit_learn": "1.9.1",
+    "pandas": "3.0.6",
+    "numpy": "2.5.4"
+  }
+}

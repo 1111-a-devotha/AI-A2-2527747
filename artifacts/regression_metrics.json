@@ -1,0 +1,64 @@
+{
+  "verification_code": "AI-A2-7747",
+  "target": "yield_tons",
+  "evaluation": "held-out test set",
+  "test_rows": 56,
+  "baseline": {
+    "mean_baseline": {
+      "mae": 2.142158,
+      "rmse": 2.593731,
+      "r2": -0.034055
+    }
+  },
+  "candidates": {
+    "linear_regression": {
+      "mae": 0.725943,
+      "rmse": 0.938223,
+      "r2": 0.864697
+    },
+    "random_forest": {
+      "mae": 0.985292,
+      "rmse": 1.220662,
+      "r2": 0.770974
+    }
+  },
+  "cross_validation_train_only": {
+    "mean_baseline": {
+      "cv_mae": 2.413136,
+      "cv_rmse": 2.94798,
+      "cv_rmse_std": 0.333952,
+      "cv_r2": -0.091605
+    },
+    "linear_regression": {
+      "cv_mae": 0.762838,
+      "cv_rmse": 0.959413,
+      "cv_rmse_std": 0.09263,
+      "cv_r2": 0.882836
+    },
+    "random_forest": {
+      "cv_mae": 1.085856,
+      "cv_rmse": 1.37504,
+      "cv_rmse_std": 0.237326,
+      "cv_r2": 0.762787
+    }
+  },
+  "selected_model": "linear_regression",
+  "selection_reason": "linear_regression has the lowest mean 5-fold cross-validated RMSE on the training split (0.9594 t vs 1.3750 t for random_forest and 2.9480 t for the mean baseline). Selection used training data only; the test set was used once to report final metrics.",
+  "selected_model_test_metrics": {
+    "mae": 0.725943,
+    "rmse": 0.938223,
+    "r2": 0.864697
+  },
+  "residual_summary": {
+    "mean_residual": 0.065513,
+    "std_residual": 0.935933,
+    "share_within_1_ton": 0.803571
+  },
+  "largest_error": {
+    "row_id": 138,
+    "actual_yield_tons": 7.7897,
+    "predicted_yield_tons": 10.4926,
+    "error_tons": -2.7029,
+    "inputs": "rainfall 1375 mm, temp 25.3 C, soil moisture 50.4 %, fertilizer 25 kg, field 1.91 ha, season A, cooperative support 0"
+  }
+}
